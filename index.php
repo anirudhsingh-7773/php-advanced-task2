@@ -10,11 +10,15 @@
 
 <body>
   <div class="container">
+
     <section class="email-form">
-      <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+      <!-- Form to collect user email input -->
+      <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
         <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
-        <input type="submit" name="Submit">
+        <input type="submit" name="submit" value="Submit">
       </form>
+
+      <!-- Include the form handling PHP script -->
       <?php require 'form.php' ?>
     </section>
   </div>
